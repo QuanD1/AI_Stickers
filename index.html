@@ -35,23 +35,45 @@
 </head>
 <body>
   <header>
-    <h1>AI 貼圖生成專題</h1>
-    <p>勤益科技大學 資工系 Ben</p>
+    <h1>AI 貼圖及時生成系統</h1>
+    <p>勤益科技大學 資訊工程系</p>
   </header>
 
   <section>
-    <h2>專題簡介</h2>
+    <h2>專案簡介</h2>
     <p>
-      本專題開發一套能將使用者輸入的文字即時轉換成貼圖的系統，結合自然語言處理、
-      圖像生成與影像處理，並以 Android 輸入法呈現，讓貼圖能直接使用於通訊軟體中。
+      開發一套能把使用者輸入的文字即時轉換成貼圖的系統，結合自然語言處理、圖像生成、影像分割，並做成 Android 輸入法，讓貼圖能直接用在通訊軟體。
     </p>
 
-    <h2>系統流程</h2>
-    <img src="your-image.png" alt="專題架構圖">
-    <p>
-      使用者輸入文字 + 選擇角色 → 傳送至後端 → 語言模型生成 Prompt → 圖像生成模型繪製 → 
-      去背與加字 → 貼圖回傳前端顯示。
+    <h2>技術重點</h2>
+<!--     <img src="your-image.png" alt="專題架構圖"> -->
+    <p style="white-space: pre-line;">
+      語言模型：把「文字 + 角色 + 情緒」轉成圖像生成 prompt
+      圖像生成模型：產生 Q 版風格貼圖
+      影像分割模型：自動去背，生成透明背景貼圖
+      文字排版演算法：自動調整字體方向、大小與位置
+      前端：Flutter（APP 主頁功能）、Kotlin（Android 輸入法介面功能）
+      後端：Python，部署於 Google Colab，透過 Cloudflare Tunnel 提供外網 API
     </p>
+    
+    <h2>專案成果</h2>
+    <p style="white-space: pre-line;">
+      完成「一句話生成一張貼圖」的即時系統
+      Android 輸入法整合，能在聊天中直接傳貼圖
+      提升貼圖多樣性與即時互動體驗
+    </p>
+    
+    <h2>系統展示</h2>
+
+    <figure>
+      <img src="demo1.gif" alt="開啟輸入法設定" style="max-width: 100%; border-radius: 12px;">
+      <figcaption>初次使用 APP 須至設定中開啟輸入法</figcaption>
+    </figure>
+
+    <figure>
+      <img src="demo2.gif" alt="貼圖傳送聊天" style="max-width: 100%; border-radius: 12px;">
+      <figcaption>貼圖透過 Android 輸入法直接傳送到聊天</figcaption>
+    </figure>
   </section>
 </body>
 </html>
