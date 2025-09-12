@@ -1,0 +1,18 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 當 main 分支有 push 時觸發
+  workflow_dispatch:  # 允許手動觸發
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v3
+        timeout-minutes: 30  # 增加逾時時間
