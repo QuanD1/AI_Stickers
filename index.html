@@ -44,8 +44,11 @@
     <h2>專案簡介</h2>
     <p>
     本專案建構一套完整之 AI 貼圖生成 Pipeline，
-    整合 NLP 語意解析、圖像生成模型與影像分割處理，
-    並透過 Android IME 實現於通訊場景中的即時貼圖生成與傳送功能。
+    整合 NLP 語意解析、圖像生成模型與影像分割處理。
+    </p>
+    
+    <p>
+    透過 Android IME 實現於通訊場景中的即時貼圖生成與傳送功能。
     </p>
 
     <h2>技術重點</h2>
@@ -61,10 +64,9 @@
     <h2>系統架構</h2>
     <p>
     系統處理流程為：
-    使用者輸入文字 → NLP 語意解析 →
-    Prompt 組合生成 → 圖像生成模型推論 →
-    影像分割與去背處理 → 文字排版優化 →
-    透過 Android IME 即時傳送貼圖。
+    使用者輸入 → NLP 解析 → Prompt 生成 →
+    圖像生成 → 影像分割 → 文字排版 →
+    Android IME 傳送貼圖。
     </p>
 
     <img src="architecture.png" alt="System Architecture Diagram" 
