@@ -43,7 +43,9 @@
   <section>
     <h2>專案簡介</h2>
     <p>
-      開發一套能把使用者輸入的文字即時轉換成貼圖的系統，結合自然語言處理、圖像生成、影像分割，並做成 Android 輸入法，讓貼圖能直接用在通訊軟體。
+    本專案建構一套完整之 AI 貼圖生成 Pipeline，
+    整合 NLP 語意解析、圖像生成模型與影像分割處理，
+    並透過 Android IME 實現於通訊場景中的即時貼圖生成與傳送功能。
     </p>
 
     <h2>技術重點</h2>
@@ -55,15 +57,25 @@
       <li><strong>前端：</strong>Flutter（APP 主頁）、Kotlin（Android IME）</li>
       <li><strong>後端：</strong>Python，部署於 Google Colab，透過 Cloudflare Tunnel 提供 API</li>
     </ul>
-    
-    <h2>專案成果</h2>
-    <p style="white-space: pre-line;">
-      完成「一句話生成一張貼圖」的即時系統
-      
-      Android 輸入法整合，能在聊天中直接傳貼圖
-      
-      提升貼圖多樣性與即時互動體驗
+
+    <h2>系統架構</h2>
+    <p>
+    系統處理流程為：
+    使用者輸入文字 → NLP 語意解析 →
+    Prompt 組合生成 → 圖像生成模型推論 →
+    影像分割與去背處理 → 文字排版優化 →
+    透過 Android IME 即時傳送貼圖。
     </p>
+
+    <img src="architecture.png" alt="System Architecture Diagram" 
+     style="max-width:100%; border-radius:12px; margin:20px 0;">
+        
+    <h2>專案成果</h2>
+    <ul>
+      <li>實現「一句話生成一張貼圖」之即時 AI 系統</li>
+      <li>完成 Android IME 整合，可於通訊軟體中直接生成並傳送貼圖</li>
+      <li>建立完整 NLP → 圖像生成 → 去背 → 排版 之處理 Pipeline</li>
+    </ul>
     
     <h2>系統展示</h2>
 
